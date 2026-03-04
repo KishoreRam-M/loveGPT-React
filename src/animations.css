@@ -1,0 +1,115 @@
+/* ═══════════════════════════════════════════════════════════════
+   LOVEGPT TAMIL — ANIMATION LAYER
+   
+   Supplements index.css.
+   All keyframes defined here, all component animation overrides.
+   No redundant keyframe definitions — index.css owns the globals.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Card hover lift (all surfaces) ── */
+.ds-surface:hover,
+.gleam-card:hover {
+    transform: translateY(-4px) !important;
+}
+
+/* ── Gleam sweep (one-shot shimmer on card) ── */
+.gleam-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.gleam-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(247, 231, 206, 0.035), transparent);
+    transform: skewX(-16deg);
+    animation: shimmerSweep 7s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── Primary button hover ── */
+.ds-btn-primary:hover:not(:disabled),
+.si-btn-primary:hover:not(:disabled),
+.rc-btn-primary:hover {
+    transform: translateY(-2px) scale(1.01) !important;
+}
+
+/* ── Live status dot pulse ── */
+.ds-badge-dot,
+.ds-live-dot,
+.si-agent-dot,
+.footer-live-dot {
+    animation: pulseDot 2.4s ease-in-out infinite !important;
+    background: #e8507a !important;
+    box-shadow: 0 0 8px rgba(232, 80, 122, 0.6) !important;
+}
+
+/* ── Romantic scrollbar ── */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c41e3a, #8b0000) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #e8507a, #c41e3a) !important;
+}
+
+/* ── Toast slide-in ── */
+.ds-toast {
+    animation: fadeUp 0.3s ease both;
+}
+
+/* ── UserGuide connector ── */
+.ug-connector {
+    background: linear-gradient(180deg, rgba(196, 30, 58, 0.35), transparent) !important;
+}
+
+/* ── Section divider border flow ── */
+.footer-border-top,
+.rc-section-top-border {
+    background: linear-gradient(90deg, transparent, #c41e3a, #e8507a, #d4a853, transparent) !important;
+    background-size: 200% 100% !important;
+    animation: borderFlow 5s linear infinite !important;
+}
+
+/* ── Footer link hover ── */
+.footer-link:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(196, 30, 58, 0.4) !important;
+    color: #f4839d !important;
+}
+
+/* ── Stat pill hover ── */
+.hero-stat-pill:hover,
+.ds-stat-pill:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    border-color: rgba(196, 30, 58, 0.3) !important;
+    box-shadow: 0 0 14px rgba(196, 30, 58, 0.10) !important;
+}
+
+/* ── Step card left accent on hover ── */
+.ug-step-card:hover>.ug-step-card-bar {
+    opacity: 1;
+}
+
+/* ── Score fill bar ── */
+.ds-score-fill {
+    background: linear-gradient(90deg, #8b0000, #c41e3a, #e8507a, #e8b4a0) !important;
+}
+
+/* ── Verdict row tilt-in on hover ── */
+.ds-verdict:hover {
+    transform: translateX(4px) !important;
+    border-color: rgba(196, 30, 58, 0.3) !important;
+}
+
+/* ── Result card nav pill ── */
+.ds-nav-pill--active {
+    color: #f4839d !important;
+    border-color: rgba(196, 30, 58, 0.35) !important;
+    background: rgba(196, 30, 58, 0.08) !important;
+}
