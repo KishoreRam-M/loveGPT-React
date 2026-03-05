@@ -1,5 +1,5 @@
 const API_URL =
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+  import.meta.env.VITE_API_URL || "https://lovegpt-fastapi-5.onrender.com/";
 
 export async function generateLovePlan(
   story: string,
